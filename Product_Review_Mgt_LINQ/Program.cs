@@ -7,6 +7,7 @@ namespace Product_Review_Mgt_LINQ
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("*****Product Review Management Program*****\n");
 
             List<ProductReview> productlist = new List<ProductReview>()
@@ -42,14 +43,16 @@ namespace Product_Review_Mgt_LINQ
             {
                 Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
-            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Count Of Review For Each ProductId \n");
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve ProductId And Review Of All Records \n");
 
             Management management = new Management();
 
-            management.RetrieveCountOfReviewForEachProductId(productlist);
+            management.RetrieveProductIdAndReviewOfAllRecords(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
             Console.ReadLine();
+
+
         }
     }
 
