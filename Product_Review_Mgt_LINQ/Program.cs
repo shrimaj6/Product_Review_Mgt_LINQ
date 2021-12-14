@@ -39,13 +39,20 @@ namespace Product_Review_Mgt_LINQ
                 new ProductReview() { ProductId = 4, UserId = 5, Rating = 4.1, Review = "Good    ", isLike = true }
             };
 
-            //foreach (var list in productlist)
-            //{
-            //    Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
-            //}
-            //Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve ProductId And Review Of All Records \n");
+            foreach (var list in productlist)
+            {
+               Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
+            }
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve ProductId And Review Of All Records \n");
 
-            //Management management = new Management();
+           
+            
+            
+            Management management = new Management();
+
+            management.RetrieveProductIdLike(productlist);
+
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------");
 
 
             //management.RetrieveProductIdAndReviewUsingSelect(productlist);
@@ -53,9 +60,9 @@ namespace Product_Review_Mgt_LINQ
             //Console.WriteLine("\n------------------------------------------------------------------------------------------------");
 
 
-            DataTable records = new DataTable();
+            //DataTable records = new DataTable();
 
-            records.AddDataIntoDataTable();
+            //records.AddDataIntoDataTable();
 
         }
     }
