@@ -7,14 +7,14 @@ namespace Product_Review_Mgt_LINQ
 {
     public class Management
     {
-        public void RetrieveProductIdAndReviewOfAllRecords(List<ProductReview> review)
+        public void SkipTopFiveRecords(List<ProductReview> review)
         {
             var recordData = (from products in review
-                              select new { ProductId = products.ProductId, Review = products.Review });
+                              select products).Skip(5);
 
             foreach (var list in recordData)
             {
-                Console.WriteLine("Product Id : " + list.ProductId + " || Review : " + list.Review);
+                Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
         }
     }
