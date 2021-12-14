@@ -48,10 +48,9 @@ namespace Product_Review_Mgt_LINQ
             Management management = new Management();
 
 
-            management.SkipTopFiveRecords(productlist);
+            management.RetrieveProductIdAndReviewUsingSelect(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
-            Console.ReadLine();
 
 
         }
