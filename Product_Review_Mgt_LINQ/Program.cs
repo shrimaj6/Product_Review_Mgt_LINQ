@@ -42,17 +42,17 @@ namespace Product_Review_Mgt_LINQ
             {
                 Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
-            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Top 3 Records from list \n");
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Data Rating are Greater then 3 and ProductId is 1, 4, 9 \n");
 
             Management management = new Management();
 
-            management.RetrieveTop3Records(productlist);
+            management.RetrieveRecordsWithGreaterThanThreeRating(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
+            Console.ReadLine();
 
 
         }
-
     }
 
 }

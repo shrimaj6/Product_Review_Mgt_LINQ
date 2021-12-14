@@ -8,11 +8,14 @@ namespace Product_Review_Mgt_LINQ
     public class Management
     {
 
-        public void RetrieveTop3Records(List<ProductReview> review)
+        public void RetrieveRecordsWithGreaterThanThreeRating(List<ProductReview> review)
         {
             var recordData = (from products in review
-                              orderby products.Rating descending
-                              select products).Take(3);
+                              where (products.ProductId == 1 ||
+                              products.ProductId == 4 ||
+                              products.ProductId == 9)
+                              && products.Rating > 3
+                              select products);
 
             foreach (var list in recordData)
             {
