@@ -14,7 +14,7 @@ namespace Product_Review_Mgt_LINQ
                 new ProductReview() { ProductId = 1, UserId = 1, Rating = 4.9, Review = "Excelent", isLike = true },
                 new ProductReview() { ProductId = 1, UserId = 1, Rating = 4.9, Review = "Excelent", isLike = true },
                 new ProductReview() { ProductId = 2, UserId = 2, Rating = 4.2, Review = "Good    ", isLike = false },
-                new ProductReview() { ProductId = 4, UserId = 3, Rating = 4.1, Review = "Good    ", isLike = true },
+                new ProductReview() { ProductId = 3, UserId = 3, Rating = 4.1, Review = "Good    ", isLike = true },
                 new ProductReview() { ProductId = 3, UserId = 3, Rating = 3.7, Review = "Average ", isLike = false },
                 new ProductReview() { ProductId = 3, UserId = 4, Rating = 4.9, Review = "Excelent", isLike = true },
                 new ProductReview() { ProductId = 4, UserId = 5, Rating = 2.9, Review = "Average ", isLike = true },
@@ -42,16 +42,14 @@ namespace Product_Review_Mgt_LINQ
             {
                 Console.WriteLine("Product Id : " + list.ProductId + " || User Id : " + list.UserId + " || Rating : " + list.Rating + " || Review : " + list.Review + " || Is Like : " + list.isLike);
             }
-            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Data Rating are Greater then 3 and ProductId is 1, 4, 9 \n");
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve Count Of Review For Each ProductId \n");
 
             Management management = new Management();
 
-            management.RetrieveRecordsWithGreaterThanThreeRating(productlist);
+            management.RetrieveCountOfReviewForEachProductId(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
             Console.ReadLine();
-
-
         }
     }
 
