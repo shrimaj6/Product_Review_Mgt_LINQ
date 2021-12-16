@@ -50,7 +50,7 @@ namespace Product_Review_Mgt_LINQ
 
             Management management = new Management();
 
-            management.RetrieveAverage(productlist);
+            management.RetrieveReviewIsGood(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
 
