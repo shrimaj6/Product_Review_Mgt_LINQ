@@ -50,7 +50,7 @@ namespace Product_Review_Mgt_LINQ
 
             Management management = new Management();
 
-            management.RetrieveReviewIsGood(productlist);
+            management.RetrieveProductId10WithRating(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
 
