@@ -7,15 +7,13 @@ namespace Product_Review_Mgt_LINQ
 {
     public class Management
     {
-        public void RetrieveProductIdLike(List<ProductReview> review)
+        public void RetrieveAverage(List<ProductReview> review)
         {
-            var recordData = (from products in review
-                              where (products.isLike == true)
-                              select products);
+            var recordData = (review.GroupBy(p => p.ProductId).Select(x => new { ProductId = x.Key, Avg = x.Average(p => p.Rating) }));
 
             foreach (var list in recordData)
             {
-                Console.WriteLine("Product Id : " + list.ProductId + " || Is Like : " + list.isLike);
+                Console.WriteLine("Product Id : " + list.ProductId + " || Average : " + list.Avg);
             }
         }
     }

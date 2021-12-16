@@ -45,12 +45,12 @@ namespace Product_Review_Mgt_LINQ
             }
             Console.WriteLine("\n------------------------------------------------------------------------------------------------ \n Retrieve ProductId And Review Of All Records \n");
 
-           
-            
-            
+
+
+
             Management management = new Management();
 
-            management.RetrieveProductIdLike(productlist);
+            management.RetrieveAverage(productlist);
 
             Console.WriteLine("\n------------------------------------------------------------------------------------------------");
 
